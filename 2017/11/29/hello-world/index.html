@@ -39,7 +39,7 @@
         
             Hello World | 
         
-        Hexo
+        DragonKid&#39;s Blog
     </title>
 
     <!-- Meta & Info -->
@@ -75,7 +75,7 @@
     <!-- Add to homescreen for Safari on iOS -->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="Hexo">
+    <meta name="apple-mobile-web-app-title" content="DragonKid&#39;s Blog">
 
     <!-- Site Verification -->
     <meta name="google-site-verification" content="Un71KRgu1b7OjkWuN88eMkx1O7949lXqXCsXUuYxm7c" />
@@ -235,7 +235,7 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="https://dragonkid.github.io">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="Hello World | Hexo">
+    <meta property="og:title" content="Hello World | DragonKid&#39;s Blog">
     <meta property="og:image" content="https://dragonkid.github.io/img/favicon.png" />
     <meta property="og:description" content="">
     
@@ -246,7 +246,7 @@
     
 
     <!-- The Twitter Card protocol -->
-    <meta name="twitter:title" content="Hello World | Hexo">
+    <meta name="twitter:title" content="Hello World | DragonKid&#39;s Blog">
     <meta name="twitter:description" content="">
     <meta name="twitter:image" content="https://dragonkid.github.io/img/favicon.png">
     <meta name="twitter:card" content="summary_large_image" />
@@ -281,7 +281,7 @@
     },
     "publisher": {
         "@type": "Organization",
-        "name": "Hexo",
+        "name": "DragonKid&#39;s Blog",
         "logo": {
             "@type":"ImageObject",
             "url": "/img/favicon.png"
@@ -477,6 +477,12 @@
 
     <!-- Share Telegram -->
     
+        <a class="post_share-link" href="https://telegram.me/share/url?url=https://dragonkid.github.io/2017/11/29/hello-world/index.html&text=Hello World" target="_blank">
+            <li class="mdl-menu__item">
+                Share to Telegram
+            </li>
+        </a>
+    
 </ul>
 
 </div>
@@ -518,6 +524,32 @@
                 <!-- Post Comments -->
                 
                     
+    <!-- 使用 gitcoment -->
+<div id="gitment-comment">
+    <!-- Gitment 评论框 -->
+<div id="container"></div>
+</div>
+<style>
+    #gitment-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+    var gitment = new Gitment({
+        //id: '页面 ID', // 可选。默认为 location.href
+        owner: 'dragonkid',
+        repo: 'git@github.com:dragonkid/dragonkid.github.io.git',
+        oauth: {
+            client_id: '4743c4ee5796fa2fec89',
+            client_secret: '2eb9c7899c8d8a65bed5cd909e635da682818192',
+        },
+    })
+    gitment.render('container')
+</script>
+
                 
             </div>
 
@@ -774,7 +806,7 @@ It will not impact the appearance and can give developers a lot of support :)
 
         <!--Copyright-->
         <div id="copyright">
-            Copyright&nbsp;©&nbsp;2017&nbsp;-<script type="text/javascript">var fd = new Date();document.write("&nbsp;" + fd.getFullYear() + "&nbsp;");</script>Hexo
+            Copyright&nbsp;©&nbsp;2017&nbsp;-<script type="text/javascript">var fd = new Date();document.write("&nbsp;" + fd.getFullYear() + "&nbsp;");</script>DragonKid's Blog
             
         </div>
 
@@ -839,6 +871,8 @@ It will not impact the appearance and can give developers a lot of support :)
 
 
 
+
+   <!-- Gitment -->
 
 
 
