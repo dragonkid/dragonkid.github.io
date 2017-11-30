@@ -43,7 +43,7 @@
     <link href="https://dragonkid.github.io/2017/10/12/Jypyter%20Notebook%20Best%20Practice/"/>
     <id>https://dragonkid.github.io/2017/10/12/Jypyter Notebook Best Practice/</id>
     <published>2017-10-12T09:08:38.000Z</published>
-    <updated>2017-11-30T04:07:27.154Z</updated>
+    <updated>2017-11-30T05:40:48.075Z</updated>
     
     <summary type="html">
     
@@ -51,7 +51,8 @@
       
         
         
-          &lt;h1 id=&quot;Jypyter-Notebook-Best-Practice&quot;&gt;&lt;a href=&quot;#Jypyter-Notebook-Best-Practice&quot; class=&quot;headerlink&quot; title=&quot;Jypyter Notebook Best Practice&quot;&gt;&lt;/a&gt;Jypyter Notebook Best Practice&lt;/h1&gt;&lt;h2 id=&quot;版本控制&quot;&gt;&lt;a href=&quot;#版本控制&quot; class=&quot;headerlink&quot; title=&quot;版本控制&quot;&gt;&lt;/a&gt;版本控制&lt;/h2&gt;&lt;p&gt;同时提交 py 和 html 文件，方便进行 codereview。&lt;/p&gt;
+          &lt;hr&gt;
+&lt;h2 id=&quot;Jypyter-Notebook-Best-Practice&quot;&gt;&lt;a href=&quot;#Jypyter-Notebook-Best-Practice&quot; class=&quot;headerlink&quot; title=&quot;Jypyter Notebook Best Practice&quot;&gt;&lt;/a&gt;Jypyter Notebook Best Practice&lt;/h2&gt;&lt;h2 id=&quot;版本控制&quot;&gt;&lt;a href=&quot;#版本控制&quot; class=&quot;headerlink&quot; title=&quot;版本控制&quot;&gt;&lt;/a&gt;版本控制&lt;/h2&gt;&lt;p&gt;同时提交 py 和 html 文件，方便进行 codereview。&lt;/p&gt;
 &lt;p&gt;通过 jupyter-notebook 的 FileContentsManager.post_save_hook 实现，添加如下代码到 jupyter-notebook
         
       
