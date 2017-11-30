@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://dragonkid.github.io/"/>
-  <updated>2017-11-29T04:40:04.776Z</updated>
+  <updated>2017-11-30T04:52:44.252Z</updated>
   <id>https://dragonkid.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://dragonkid.github.io/2017/11/29/hello-world/"/>
     <id>https://dragonkid.github.io/2017/11/29/hello-world/</id>
     <published>2017-11-29T04:40:04.776Z</published>
-    <updated>2017-11-29T04:40:04.776Z</updated>
+    <updated>2017-11-30T04:52:44.252Z</updated>
     
     <summary type="html">
     
@@ -30,6 +30,29 @@
         
         
           &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;troubleshooting&lt;/a&gt; or you can ask
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://dragonkid.github.io/2017/10/12/Jypyter%20Notebook%20Best%20Practice/"/>
+    <id>https://dragonkid.github.io/2017/10/12/Jypyter Notebook Best Practice/</id>
+    <published>2017-10-12T09:08:38.000Z</published>
+    <updated>2017-11-30T04:07:27.154Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;Jypyter-Notebook-Best-Practice&quot;&gt;&lt;a href=&quot;#Jypyter-Notebook-Best-Practice&quot; class=&quot;headerlink&quot; title=&quot;Jypyter Notebook Best Practice&quot;&gt;&lt;/a&gt;Jypyter Notebook Best Practice&lt;/h1&gt;&lt;h2 id=&quot;版本控制&quot;&gt;&lt;a href=&quot;#版本控制&quot; class=&quot;headerlink&quot; title=&quot;版本控制&quot;&gt;&lt;/a&gt;版本控制&lt;/h2&gt;&lt;p&gt;同时提交 py 和 html 文件，方便进行 codereview。&lt;/p&gt;
+&lt;p&gt;通过 jupyter-notebook 的 FileContentsManager.post_save_hook 实现，添加如下代码到 jupyter-notebook
         
       
     
