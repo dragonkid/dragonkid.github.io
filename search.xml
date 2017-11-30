@@ -34,7 +34,7 @@
 </ul>
 <h2 id="数据加载"><a href="#数据加载" class="headerlink" title="数据加载"></a>数据加载</h2><p>避免在不同位置多次导入同一份数据。通过 head 函数导入部分数据：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">dframe = pd.read_csv(<span class="string">'./data/titanic-data.csv'</span>)</span><br><span class="line">dframe.head()</span><br></pre></td></tr></table></figure>
-<h3 id="Qgrid"><a href="#Qgrid" class="headerlink" title="Qgrid"></a>Qgrid</h3><p>/images/<br><a href="https://github.com/quantopian/qgrid" target="_blank" rel="noopener">grid</a> - SlickGrid in Jupyter Notebooks</p>
+<h3 id="Qgrid"><a href="#Qgrid" class="headerlink" title="Qgrid"></a>Qgrid</h3><p><a href="https://github.com/quantopian/qgrid" target="_blank" rel="noopener">grid</a> - SlickGrid in Jupyter Notebooks</p>
 <p><img src="/images/15077993187069/15079714067211.jpg" alt=""></p>
 <p><strong>注：qgrid 包对于 ipywidgets 和 jupyter notebook 的版本存在严格的依赖关系，盲目使用最新版本可能导致 qgrid 不可用</strong></p>
 <h2 id="ast-node-interactivity"><a href="#ast-node-interactivity" class="headerlink" title="ast_node_interactivity"></a>ast_node_interactivity</h2><p>当在同一个 code cell 中同时使用 dataframe 的 head、tail 等多个方法时，Jupyter Notebook 的默认行为是只显示其中的最后一个。如果需要将他们同时显示出来，则需要修改如下配置：</p>
