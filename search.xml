@@ -268,9 +268,9 @@ TypeError<span class="token punctuation">:</span> <span class="token string">'No
 <li><code>ctrl + &#39;/&quot;</code>: 为当前文本增加单/双引号 </li>
 <li><code>ctrl + p/n</code>: 查看上一条/下一条命令</li>
 <li><code>ctrl + r</code>/<code>ctrl + shift + r</code>: 查找曾经输入过的命令，按多次查找下一个或上一个</li>
-<li><code>Ctrl+XX</code>: Move between the beginning of the line and the current position of the cursor. This allows you to press Ctrl+XX to return to the start of the line, change something, and then press Ctrl+XX to go back to your original cursor position. To use this shortcut, hold the Ctrl key and tap the X key twice.</li>
-<li>Ctrl+D or Delete: Delete the character under the cursor.</li>
-<li>Alt+D: Delete all characters after the cursor on the current line.</li>
+<li><code>Ctrl+XX</code>: Move between the beginning of the line and the current position of the cursor. This allows you to press <code>Ctrl+XX</code> to return to the start of the line, change something, and then press <code>Ctrl+XX</code> to go back to your original cursor position. To use this shortcut, hold the <code>Ctrl</code> key and tap the <code>X</code> key twice.</li>
+<li><code>Ctrl+D or Delete</code>: Delete the character under the cursor.</li>
+<li><code>Alt+D</code>: Delete all characters after the cursor on the current line.</li>
 <li><code>alt + h</code>: 命令输入到一半的时候需要查看 man 手册</li>
 <li><code>sudo</code> 插件: 按两次 <code>esc</code> 在命令的开头补齐 sudo</li>
 <li><code>colored-man-pages</code> 插件: man 手册高亮</li>
