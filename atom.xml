@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://dragonkid.github.io/"/>
-  <updated>2017-11-30T04:52:44.252Z</updated>
+  <updated>2017-12-01T03:32:00.634Z</updated>
   <id>https://dragonkid.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>研发技巧</title>
+    <link href="https://dragonkid.github.io/2017/12/01/%E7%A0%94%E5%8F%91%E6%8A%80%E5%B7%A7/"/>
+    <id>https://dragonkid.github.io/2017/12/01/研发技巧/</id>
+    <published>2017-12-01T03:31:11.040Z</published>
+    <updated>2017-12-01T03:32:00.634Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;Python-编码规范&quot;&gt;&lt;a href=&quot;#Python-编码规范&quot; class=&quot;headerlink&quot; title=&quot;Python 编码规范&quot;&gt;&lt;/a&gt;Python 编码规范&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://wiki.woodpecker.org.cn/moin/PythonCodingRule&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Python Coding Rule&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://www.python.org/dev/peps/pep-0008/&quot; target=&quot;_blank&quot;
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>
