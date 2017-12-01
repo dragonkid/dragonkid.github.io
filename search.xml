@@ -40,20 +40,16 @@
         &#39;timestamp&#39;: datetime.datetime.utcnow()
     })
 </code></pre><ul>
-<li><p>函数拆分、接口设计原则优先考虑可读性，在出现性能问题时再考虑合并优化</p>
-</li>
-<li><p>定义数值型常量时可以直接写清楚计算过程，解释器会帮忙将常量优化为计算结果</p>
-</li>
+<li>函数拆分、接口设计原则优先考虑可读性，在出现性能问题时再考虑合并优化</li>
+<li>定义数值型常量时可以直接写清楚计算过程，解释器会帮忙将常量优化为计算结果</li>
 </ul>
 <pre class=" language-python"><code class="language-python">SECOND_ONE_WEEK <span class="token operator">=</span> <span class="token number">604800</span>
 
 SECOND_ONE_WEEK <span class="token operator">=</span> <span class="token number">7</span> <span class="token operator">*</span> <span class="token number">24</span> <span class="token operator">*</span> <span class="token number">3600</span>    <span class="token comment" spellcheck="true"># better</span>
 </code></pre>
 <ul>
-<li><p><code>try ... except Exception: ...</code> 本质上是异常处理，而非仅仅是异常捕获。稳定代码和非稳定代码要做出区分，应严格避免对大段代码的异常捕获，对异常的处理也应该尽可能细致，尽量避免不负责任的匿名 catch 的出现</p>
-</li>
-<li><p>Dict upsert</p>
-</li>
+<li><code>try ... except Exception: ...</code> 本质上是异常处理，而非仅仅是异常捕获。稳定代码和非稳定代码要做出区分，应严格避免对大段代码的异常捕获，对异常的处理也应该尽可能细致，尽量避免不负责任的匿名 catch 的出现</li>
+<li>Dict upsert</li>
 </ul>
 <p>常规实现：</p>
 <pre><code>dict_uo2data = {}
