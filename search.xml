@@ -3,7 +3,7 @@
   
     
     <entry>
-      <title><![CDATA[研发技巧]]></title>
+      <title><![CDATA[Python Best Practices]]></title>
       <url>/2017/12/01/%E7%A0%94%E5%8F%91%E6%8A%80%E5%B7%A7/</url>
       <content type="html"><![CDATA[<h1 id="Python-编码规范"><a href="#Python-编码规范" class="headerlink" title="Python 编码规范"></a>Python 编码规范</h1><ul>
 <li><a href="https://wiki.woodpecker.org.cn/moin/PythonCodingRule" target="_blank" rel="noopener">Python Coding Rule</a></li>
@@ -248,7 +248,7 @@ TypeError<span class="token punctuation">:</span> <span class="token string">'No
 </blockquote>
 </blockquote>
 <h2 id="tmux"><a href="#tmux" class="headerlink" title="tmux"></a>tmux</h2><ul>
-<li><a href="https://github.com/dragonkid" target="_blank" rel="noopener">https://github.com/dragonkid</a></li>
+<li><a href="https://github.com/dragonkid/tmux-config" target="_blank" rel="noopener">https://github.com/dragonkid/tmux-config</a></li>
 <li>zoom pane <code>ctrl + z</code></li>
 </ul>
 <h2 id="keychain"><a href="#keychain" class="headerlink" title="keychain"></a>keychain</h2><pre class=" language-shell"><code class="language-shell">eval $(keychain -Q -q --agents ssh --eval ~/.ssh/id_rsa)
