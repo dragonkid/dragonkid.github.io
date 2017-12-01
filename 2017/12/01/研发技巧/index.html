@@ -247,7 +247,7 @@
 
     
         <meta property="article:published_time" content="Fri Dec 01 2017 11:31:11 GMT+0800" />
-        <meta property="article:modified_time" content="Fri Dec 01 2017 11:32:00 GMT+0800" />
+        <meta property="article:modified_time" content="Fri Dec 01 2017 12:04:26 GMT+0800" />
     
 
     <!-- The Twitter Card protocol -->
@@ -274,7 +274,7 @@
     "mainEntityOfPage": "https://dragonkid.github.io/2017/12/01/研发技巧/index.html",
     "headline": "研发技巧",
     "datePublished": "Fri Dec 01 2017 11:31:11 GMT+0800",
-    "dateModified": "Fri Dec 01 2017 11:32:00 GMT+0800",
+    "dateModified": "Fri Dec 01 2017 12:04:26 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "DragonKid",
@@ -506,22 +506,14 @@
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
         <h1 id="Python-编码规范"><a href="#Python-编码规范" class="headerlink" title="Python 编码规范"></a>Python 编码规范</h1><ul>
-<li><p><a href="https://wiki.woodpecker.org.cn/moin/PythonCodingRule" target="_blank" rel="noopener">Python Coding Rule</a></p>
-</li>
-<li><p><a href="https://www.python.org/dev/peps/pep-0008/" target="_blank" rel="noopener">PEP8</a></p>
-</li>
-<li><p>遵从项目原有代码风格</p>
-</li>
-<li><p>代码整洁优先级最高</p>
-</li>
-<li><p>尽量使用 <code>key in dict</code> 或者 <code>dict.get(key)</code> 判断 dict 中是否存在 <code>key</code> 这个键或获取键 <code>key</code> 的 <code>value</code></p>
-</li>
-<li><p><code>itertools</code> 包可以应付绝大部分对 list 类型数据的操作场景，遇到特殊的 list 类型数据操作需求时优先考虑使用 <code>itertools</code> 包，而非自行实现</p>
-</li>
-<li><p>服务端一律使用 <code>time.time()</code> 获取 UTC 时间戳作为时间标识，在需要进行展示的地方使用对应方法转换为本时区的不同格式时间</p>
-</li>
-<li><p>通过截断逻辑避免缩进的出现。以下述代码为例：</p>
-</li>
+<li><a href="https://wiki.woodpecker.org.cn/moin/PythonCodingRule" target="_blank" rel="noopener">Python Coding Rule</a></li>
+<li><a href="https://www.python.org/dev/peps/pep-0008/" target="_blank" rel="noopener">PEP8</a></li>
+<li>遵从项目原有代码风格</li>
+<li>代码整洁优先级最高</li>
+<li>尽量使用 <code>key in dict</code> 或者 <code>dict.get(key)</code> 判断 dict 中是否存在 <code>key</code> 这个键或获取键 <code>key</code> 的 <code>value</code></li>
+<li><code>itertools</code> 包可以应付绝大部分对 list 类型数据的操作场景，遇到特殊的 list 类型数据操作需求时优先考虑使用 <code>itertools</code> 包，而非自行实现</li>
+<li>服务端一律使用 <code>time.time()</code> 获取 UTC 时间戳作为时间标识，在需要进行展示的地方使用对应方法转换为本时区的不同格式时间</li>
+<li>通过截断逻辑避免缩进的出现。以下述代码为例：</li>
 </ul>
 <pre class=" language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">save_cache_data_num_to_mongo</span><span class="token punctuation">(</span>radar_url<span class="token punctuation">,</span> data_num<span class="token punctuation">)</span><span class="token punctuation">:</span>
     data_source <span class="token operator">=</span> conn<span class="token punctuation">.</span>staratlasui<span class="token punctuation">.</span>data_source<span class="token punctuation">.</span>find<span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token string">'host_addr'</span><span class="token punctuation">:</span> radar_url<span class="token punctuation">}</span><span class="token punctuation">)</span>
