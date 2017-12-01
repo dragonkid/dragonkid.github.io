@@ -3,8 +3,8 @@
   
     
     <entry>
-      <title><![CDATA[Python Best Practices]]></title>
-      <url>/2017/12/01/%E7%A0%94%E5%8F%91%E6%8A%80%E5%B7%A7/</url>
+      <title><![CDATA[Python Best Practice]]></title>
+      <url>/2017/12/01/Python%20Best%20Practice/</url>
       <content type="html"><![CDATA[<h1 id="Python-编码规范"><a href="#Python-编码规范" class="headerlink" title="Python 编码规范"></a>Python 编码规范</h1><ul>
 <li><a href="https://wiki.woodpecker.org.cn/moin/PythonCodingRule" target="_blank" rel="noopener">Python Coding Rule</a></li>
 <li><a href="https://www.python.org/dev/peps/pep-0008/" target="_blank" rel="noopener">PEP8</a></li>
