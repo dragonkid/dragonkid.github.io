@@ -243,9 +243,7 @@ TypeError<span class="token punctuation">:</span> <span class="token string">'No
 <li>workflow</li>
 </ul>
 <h2 id="Dash"><a href="#Dash" class="headerlink" title="Dash"></a>Dash</h2><h2 id="autojump"><a href="#autojump" class="headerlink" title="autojump"></a>autojump</h2><h2 id="ssh-config"><a href="#ssh-config" class="headerlink" title="ssh config"></a>ssh config</h2><blockquote>
-<blockquote>
 <p>The known_hosts file lets the client authenticate the server, to check that it isn’t connecting to an impersonator. The authorized_keys file lets the server authenticate the user.</p>
-</blockquote>
 </blockquote>
 <h2 id="tmux"><a href="#tmux" class="headerlink" title="tmux"></a>tmux</h2><ul>
 <li><a href="https://github.com/dragonkid/tmux-config" target="_blank" rel="noopener">https://github.com/dragonkid/tmux-config</a></li>
