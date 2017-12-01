@@ -247,7 +247,7 @@
 
     
         <meta property="article:published_time" content="Fri Dec 01 2017 11:31:11 GMT+0800" />
-        <meta property="article:modified_time" content="Fri Dec 01 2017 13:30:17 GMT+0800" />
+        <meta property="article:modified_time" content="Fri Dec 01 2017 17:57:17 GMT+0800" />
     
 
     <!-- The Twitter Card protocol -->
@@ -274,7 +274,7 @@
     "mainEntityOfPage": "https://dragonkid.github.io/2017/12/01/Python Best Practice/index.html",
     "headline": "Python Best Practice",
     "datePublished": "Fri Dec 01 2017 11:31:11 GMT+0800",
-    "dateModified": "Fri Dec 01 2017 13:30:17 GMT+0800",
+    "dateModified": "Fri Dec 01 2017 17:57:17 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "DragonKid",
@@ -515,30 +515,20 @@
 <li>服务端一律使用 <code>time.time()</code> 获取 UTC 时间戳作为时间标识，在需要进行展示的地方使用对应方法转换为本时区的不同格式时间</li>
 <li>通过截断逻辑避免缩进的出现。以下述代码为例：</li>
 </ul>
-<pre class=" language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">save_cache_data_num_to_mongo</span><span class="token punctuation">(</span>radar_url<span class="token punctuation">,</span> data_num<span class="token punctuation">)</span><span class="token punctuation">:</span>
-    data_source <span class="token operator">=</span> conn<span class="token punctuation">.</span>staratlasui<span class="token punctuation">.</span>data_source<span class="token punctuation">.</span>find<span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token string">'host_addr'</span><span class="token punctuation">:</span> radar_url<span class="token punctuation">}</span><span class="token punctuation">)</span>
-    <span class="token keyword">if</span> data_source<span class="token punctuation">.</span>count<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">></span> <span class="token number">0</span><span class="token punctuation">:</span>
-        cache_date_num_coll <span class="token operator">=</span> conn<span class="token punctuation">.</span>staratlasui<span class="token punctuation">.</span>cache_data_num
-        cache_date_num_coll<span class="token punctuation">.</span>insert<span class="token punctuation">(</span><span class="token punctuation">{</span>
-            <span class="token string">'data_source'</span><span class="token punctuation">:</span> radar_url<span class="token punctuation">,</span>
-            <span class="token string">'data_source_name'</span><span class="token punctuation">:</span> data_source<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">'name'</span><span class="token punctuation">,</span> <span class="token string">''</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
-            <span class="token string">'data_num'</span><span class="token punctuation">:</span> data_num<span class="token punctuation">,</span>
-            <span class="token string">'timestamp'</span><span class="token punctuation">:</span> datetime<span class="token punctuation">.</span>datetime<span class="token punctuation">.</span>utcnow<span class="token punctuation">(</span><span class="token punctuation">)</span>
-        <span class="token punctuation">}</span><span class="token punctuation">)</span>
-</code></pre>
-<p>更好的写法为：</p>
-<pre><code>def save_cache_data_num_to_mongo(radar_url, data_num):
-    data_source = conn.staratlasui.data_source.find({&#39;host_addr&#39;: radar_url})
-    if data_source.count() == 0:
+<pre><code>def save_data_to_mongo(data):
+    if data:
+        check_data(data)
+        format_data(data)
+        extend_data(data)
+        db.collection.insert(data)
+</code></pre><p>更好的写法为：</p>
+<pre><code>def save_data_to_mongo(data):
+    if not data:
         return
-
-    cache_date_num_coll = conn.staratlasui.cache_data_num
-    cache_date_num_coll.insert({
-        &#39;data_source&#39;: radar_url,
-        &#39;data_source_name&#39;: data_source[0].get(&#39;name&#39;, &#39;&#39;),
-        &#39;data_num&#39;: data_num,
-        &#39;timestamp&#39;: datetime.datetime.utcnow()
-    })
+    check_data(data)
+    format_data(data)
+    extend_data(data)
+    db.collection.insert(data)
 </code></pre><ul>
 <li>函数拆分、接口设计原则优先考虑可读性，在出现性能问题时再考虑合并优化</li>
 <li>定义数值型常量时可以直接写清楚计算过程，解释器会帮忙将常量优化为计算结果</li>
