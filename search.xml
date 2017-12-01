@@ -248,49 +248,32 @@ TypeError<span class="token punctuation">:</span> <span class="token string">'No
 </blockquote>
 </blockquote>
 <h2 id="tmux"><a href="#tmux" class="headerlink" title="tmux"></a>tmux</h2><ul>
-<li><p><a href="https://github.com/dragonkid" target="_blank" rel="noopener">https://github.com/dragonkid</a></p>
-</li>
-<li><p>zoom pane <code>ctrl + z</code></p>
-</li>
+<li><a href="https://github.com/dragonkid" target="_blank" rel="noopener">https://github.com/dragonkid</a></li>
+<li>zoom pane <code>ctrl + z</code></li>
 </ul>
 <h2 id="keychain"><a href="#keychain" class="headerlink" title="keychain"></a>keychain</h2><pre class=" language-shell"><code class="language-shell">eval $(keychain -Q -q --agents ssh --eval ~/.ssh/id_rsa)
 </code></pre>
 <h2 id="proxychains"><a href="#proxychains" class="headerlink" title="proxychains"></a>proxychains</h2><h2 id="mitmproxy"><a href="#mitmproxy" class="headerlink" title="mitmproxy"></a>mitmproxy</h2><pre class=" language-shell"><code class="language-shell">mitmproxy -p 9200 -R http://localhost:9201 -b 0.0.0.0 --no-mouse
 </code></pre>
 <h2 id="virtualenvwrapper"><a href="#virtualenvwrapper" class="headerlink" title="virtualenvwrapper"></a>virtualenvwrapper</h2><h2 id="vagrant"><a href="#vagrant" class="headerlink" title="vagrant"></a>vagrant</h2><ul>
-<li><p>vagrant scp</p>
-</li>
-<li><p>vagrant oh-my-zsh plugin</p>
-</li>
+<li>vagrant scp</li>
+<li>vagrant oh-my-zsh plugin</li>
 </ul>
 <h2 id="shell-zsh"><a href="#shell-zsh" class="headerlink" title="shell/zsh"></a>shell/zsh</h2><ul>
-<li><p><code>alt + f/b</code>: 前进/后退一个单词</p>
-</li>
-<li><p><code>ctrl + f/b</code>: 前进/后退一个字母</p>
-</li>
-<li><p><code>ctrl + u/y</code>: 清空/恢复当前输入</p>
-</li>
-<li><p><code>ctrl + e</code>: 移动到当前输入末尾</p>
-</li>
-<li><p><code>ctrl + a</code>: 移动到当前输入开头</p>
-</li>
-<li><p><code>ctrl + &#39;/&quot;</code>: 为当前文本增加单/双引号 </p>
-</li>
-<li><p><code>ctrl + p/n</code>: 查看上一条/下一条命令</p>
-</li>
-<li><p><code>ctrl + r</code>/<code>ctrl + shift + r</code>: 查找曾经输入过的命令，按多次查找下一个或上一个</p>
-</li>
-<li><p><code>Ctrl+XX</code>: Move between the beginning of the line and the current position of the cursor. This allows you to press Ctrl+XX to return to the start of the line, change something, and then press Ctrl+XX to go back to your original cursor position. To use this shortcut, hold the Ctrl key and tap the X key twice.</p>
-</li>
+<li><code>alt + f/b</code>: 前进/后退一个单词</li>
+<li><code>ctrl + f/b</code>: 前进/后退一个字母</li>
+<li><code>ctrl + u/y</code>: 清空/恢复当前输入</li>
+<li><code>ctrl + e</code>: 移动到当前输入末尾</li>
+<li><code>ctrl + a</code>: 移动到当前输入开头</li>
+<li><code>ctrl + &#39;/&quot;</code>: 为当前文本增加单/双引号 </li>
+<li><code>ctrl + p/n</code>: 查看上一条/下一条命令</li>
+<li><code>ctrl + r</code>/<code>ctrl + shift + r</code>: 查找曾经输入过的命令，按多次查找下一个或上一个</li>
+<li><code>Ctrl+XX</code>: Move between the beginning of the line and the current position of the cursor. This allows you to press Ctrl+XX to return to the start of the line, change something, and then press Ctrl+XX to go back to your original cursor position. To use this shortcut, hold the Ctrl key and tap the X key twice.</li>
 <li>Ctrl+D or Delete: Delete the character under the cursor.</li>
-<li><p>Alt+D: Delete all characters after the cursor on the current line.</p>
-</li>
-<li><p><code>alt + h</code>: 命令输入到一半的时候需要查看 man 手册</p>
-</li>
-<li><p><code>sudo</code> 插件: 按两次 <code>esc</code> 在命令的开头补齐 sudo</p>
-</li>
-<li><p><code>colored-man-pages</code> 插件: man 手册高亮</p>
-</li>
+<li>Alt+D: Delete all characters after the cursor on the current line.</li>
+<li><code>alt + h</code>: 命令输入到一半的时候需要查看 man 手册</li>
+<li><code>sudo</code> 插件: 按两次 <code>esc</code> 在命令的开头补齐 sudo</li>
+<li><code>colored-man-pages</code> 插件: man 手册高亮</li>
 </ul>
 <h2 id="Balsamiq"><a href="#Balsamiq" class="headerlink" title="Balsamiq"></a>Balsamiq</h2><p>研发快速制作原型图</p>
 <h2 id="Pycharm"><a href="#Pycharm" class="headerlink" title="Pycharm"></a>Pycharm</h2><ul>
