@@ -3,7 +3,7 @@
   
     
     <entry>
-      <title><![CDATA[Arch On Raspberry Pi]]></title>
+      <title><![CDATA[Arch on Raspberry Pi]]></title>
       <url>/2017/12/01/Arch%20Configuration/</url>
       <content type="html"><![CDATA[<p>Install arch to Raspberry Pi and the basic configuration of arch</p>
 <h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><p>按照 <a href="https://archlinuxarm.org/platforms/armv6/raspberry-pi" target="_blank" rel="noopener">Arch Wiki</a> 中的步骤操作即可。</p>
