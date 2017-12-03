@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://dragonkid.github.io/"/>
-  <updated>2017-12-01T09:57:17.932Z</updated>
+  <updated>2017-12-03T06:25:16.423Z</updated>
   <id>https://dragonkid.github.io/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Arch On Raspberry Pi</title>
+    <link href="https://dragonkid.github.io/2017/12/01/Arch%20Configuration/"/>
+    <id>https://dragonkid.github.io/2017/12/01/Arch Configuration/</id>
+    <published>2017-12-01T11:35:05.030Z</published>
+    <updated>2017-12-03T06:25:16.423Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Install arch to Raspberry Pi and the basic configuration of arch&lt;/p&gt;
+&lt;h1 id=&quot;安装&quot;&gt;&lt;a href=&quot;#安装&quot; class=&quot;headerlink&quot; title=&quot;安装&quot;&gt;&lt;/a&gt;安装&lt;/h1&gt;&lt;p&gt;按照 &lt;a href=&quot;https://archlinuxarm.org/platforms/armv6/raspberry-pi&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Arch Wiki&lt;/a&gt; 中的步骤操作即可。&lt;/p&gt;
+&lt;h2 id=&quot;FAQ&quot;&gt;&lt;a href=&quot;#FAQ&quot; class=&quot;headerlink&quot; title=&quot;FAQ&quot;&gt;&lt;/a&gt;FAQ&lt;/h2&gt;&lt;h3 id=&quot;mkfs-vfat-command-not-found&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Python Best Practice</title>

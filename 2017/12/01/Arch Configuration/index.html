@@ -37,7 +37,7 @@
     
     <title>
         
-            Archives: 2017 | 
+            Arch On Raspberry Pi | 
         
         DragonKid&#39;s Blog
     </title>
@@ -102,6 +102,9 @@
         <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?MKetZV3cUTfDxvMffaOezg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
 
         
+            
+                <style id="prettify_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prettify_css","/css/prettify.min.css?zp8STOU9v89XWFEnN+6YmQ==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+                <style id="prettify_theme"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prettify_theme","/css/prettify/github-v2.min.css?AfzKxt++K+/lhZBlSjnxwg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
             
         
 
@@ -237,15 +240,18 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="https://dragonkid.github.io">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="Archives: 2017 | DragonKid&#39;s Blog">
+    <meta property="og:title" content="Arch On Raspberry Pi | DragonKid&#39;s Blog">
     <meta property="og:image" content="https://dragonkid.github.io/img/favicon.png" />
     <meta property="og:description" content="">
     
 
     
+        <meta property="article:published_time" content="Fri Dec 01 2017 19:35:05 GMT+0800" />
+        <meta property="article:modified_time" content="Sun Dec 03 2017 14:25:16 GMT+0800" />
+    
 
     <!-- The Twitter Card protocol -->
-    <meta name="twitter:title" content="Archives: 2017 | DragonKid&#39;s Blog">
+    <meta name="twitter:title" content="Arch On Raspberry Pi | DragonKid&#39;s Blog">
     <meta name="twitter:description" content="">
     <meta name="twitter:image" content="https://dragonkid.github.io/img/favicon.png">
     <meta name="twitter:card" content="summary_large_image" />
@@ -253,13 +259,43 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="https://dragonkid.github.io/archives/2017/index.html" />
+        <link rel="canonical" href="https://dragonkid.github.io/2017/12/01/Arch Configuration/index.html" />
     
 
     <!-- Structured-data for SEO -->
     
         
 
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "https://dragonkid.github.io/2017/12/01/Arch Configuration/index.html",
+    "headline": "Arch On Raspberry Pi",
+    "datePublished": "Fri Dec 01 2017 19:35:05 GMT+0800",
+    "dateModified": "Sun Dec 03 2017 14:25:16 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "DragonKid",
+        "image": {
+            "@type": "ImageObject",
+            "url": "http://p04gthd99.bkt.clouddn.com/avatar.jpg"
+        },
+        "description": "Hi, nice to meet you"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "DragonKid&#39;s Blog",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon.png"
+        }
+    },
+    "keywords": "",
+    "description": "",
+}
+</script>
 
 
     
@@ -301,206 +337,278 @@
                         </button>
                     
 
-                    <!-- Index Module -->
-<div class="material-index mdl-grid">
-    
-    <div class="locate-thumbnail-symbol"></div>
+                    <!-- Post TOC -->
 
-    <!-- Pin on top -->
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#安装"><span class="post-toc-number">1.</span> <span class="post-toc-text">安装</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#FAQ"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">FAQ</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#mkfs-vfat-command-not-found"><span class="post-toc-number">1.1.1.</span> <span class="post-toc-text">mkfs.vfat: command not found</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Partition-1-contains-a-vfat-signature"><span class="post-toc-number">1.1.2.</span> <span class="post-toc-text">Partition #1 contains a vfat signature</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#网络"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">网络</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#配置"><span class="post-toc-number">2.</span> <span class="post-toc-text">配置</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#权限"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">权限</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#WIFI"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">WIFI</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#配置-locale"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">配置 locale</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#源"><span class="post-toc-number">2.4.</span> <span class="post-toc-text">源</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#yaourt"><span class="post-toc-number">2.5.</span> <span class="post-toc-text">yaourt</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#build-essential"><span class="post-toc-number">2.6.</span> <span class="post-toc-text">build-essential</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Backup"><span class="post-toc-number">3.</span> <span class="post-toc-text">Backup</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Refs"><span class="post-toc-number">4.</span> <span class="post-toc-text">Refs</span></a></li></ol>
+    </ul>
     
 
-    <!-- Normal Post -->
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
     
         
             <!-- Random Thumbnail -->
             <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
 
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017/12/01/Arch Configuration/">Arch On Raspberry Pi</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            Install arch to Raspberry Pi and the basic configuration of arch
-
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017/12/01/Arch Configuration/" target="_self">Read more</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="http://p04gthd99.bkt.clouddn.com/avatar.jpg" width="44px" height="44px" alt="DragonKid's avatar">
-            </div>
-            <div>
-                <strong>DragonKid</strong>
-                <span>Dec 01, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017/12/01/Python Best Practice/">Python Best Practice</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017/12/01/Python Best Practice/" target="_self">Read more</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="http://p04gthd99.bkt.clouddn.com/avatar.jpg" width="44px" height="44px" alt="DragonKid's avatar">
-            </div>
-            <div>
-                <strong>DragonKid</strong>
-                <span>Dec 01, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017/10/12/Jypyter Notebook Best Practice/">Jypyter Notebook Best Practice</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017/10/12/Jypyter Notebook Best Practice/" target="_self">Read more</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="http://p04gthd99.bkt.clouddn.com/avatar.jpg" width="44px" height="44px" alt="DragonKid's avatar">
-            </div>
-            <div>
-                <strong>DragonKid</strong>
-                <span>Oct 12, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-
-    
-
-    
-        <script type="text/ls-javascript" id="thumbnail-script">
-    var randomNum;
-
-    var locatePost = $('.locate-thumbnail-symbol').next();
-    for(var i = 0; i < 10; i++) {
-        randomNum = Math.floor(Math.random() * 19 + 1);
-
-        locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
-        locatePost.children('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
     $('.post_thumbnail-random').addClass('lazy');
-
-        locatePost = locatePost.next();
-    }
 </script>
 
+        
+    
+            <p class="article-headline-p">
+                Arch On Raspberry Pi
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="http://p04gthd99.bkt.clouddn.com/avatar.jpg" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>DragonKid</strong>
+        <span>Dec 01, 2017</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+
+    <!-- Share -->
+    <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Arch On Raspberry Pi&url=https://dragonkid.github.io/2017/12/01/Arch Configuration/index.html&pic=https://dragonkid.github.io/img/favicon.png&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                Share to Weibo
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Arch On Raspberry Pi&url=https://dragonkid.github.io/2017/12/01/Arch Configuration/index.html&via=DragonKid" target="_blank">
+            <li class="mdl-menu__item">
+                Share to Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=https://dragonkid.github.io/2017/12/01/Arch Configuration/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                Share to Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=https://dragonkid.github.io/2017/12/01/Arch Configuration/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                Share to Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+        <a class="post_share-link" href="https://telegram.me/share/url?url=https://dragonkid.github.io/2017/12/01/Arch Configuration/index.html&text=Arch On Raspberry Pi" target="_blank">
+            <li class="mdl-menu__item">
+                Share to Telegram
+            </li>
+        </a>
+    
+</ul>
+
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <p>Install arch to Raspberry Pi and the basic configuration of arch</p>
+<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><p>按照 <a href="https://archlinuxarm.org/platforms/armv6/raspberry-pi" target="_blank" rel="noopener">Arch Wiki</a> 中的步骤操作即可。</p>
+<h2 id="FAQ"><a href="#FAQ" class="headerlink" title="FAQ"></a>FAQ</h2><h3 id="mkfs-vfat-command-not-found"><a href="#mkfs-vfat-command-not-found" class="headerlink" title="mkfs.vfat: command not found"></a>mkfs.vfat: command not found</h3><pre><code>yaourt -S dosfstools    # for mkfs.vfat and mkfs.msdos
+yaourt -S ntfsprogs     # for mkfs.ntfs
+</code></pre><h3 id="Partition-1-contains-a-vfat-signature"><a href="#Partition-1-contains-a-vfat-signature" class="headerlink" title="Partition #1 contains a vfat signature"></a>Partition #1 contains a vfat signature</h3><blockquote>
+<p>Each disk and partition has some sort of signature and metadata/magic strings on it. The metadata used by operating system to configure disks or attach drivers and mount disks on your system. You can view such partition-table signatures/metadata/magic strings using the wipefs command. </p>
+</blockquote>
+<p>遇到上述提示选择 yes 即可。</p>
+<h2 id="网络"><a href="#网络" class="headerlink" title="网络"></a>网络</h2><p>配置树莓派的 <code>ethernet</code> 网卡为固定 IP，这样就可以在树莓派启动后直接通过 <code>ethernet</code> 网卡直连树莓派，对其进行配置。</p>
+<p>重新挂载 root 目录：</p>
+<pre><code>mount /dev/sdx2 root/
+</code></pre><p>编辑/创建如下文件，并将其修改为如下内容：</p>
+<pre><code>vi /etc/systemd/network/eth0.network
+</code></pre><pre><code>[Match]
+Name=eth0
+
+[Network]
+Address=192.168.1.100/24
+</code></pre><p>弹出 root 目录并保证数据正确写入：</p>
+<pre><code>umount root &amp;&amp; sync
+</code></pre><p>这样将就可以通过 <code>192.168.1.100</code> 这个 IP 与树莓派直连，并通过 ssh 进行登录完成后续配置过程。</p>
+<h1 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h1><h2 id="权限"><a href="#权限" class="headerlink" title="权限"></a>权限</h2><p>切换到 root 用户：</p>
+<pre><code>su - root   # sudo 命令需要后续通过包管理工具安装
+</code></pre><p>修改默认 alarm/root 用户密码：</p>
+<pre><code>passwd alarm
+passwd root
+</code></pre><h2 id="WIFI"><a href="#WIFI" class="headerlink" title="WIFI"></a>WIFI</h2><p>无线网卡型号：TP-LINK TL-WN725N USB无线网卡</p>
+<pre class=" language-shell"><code class="language-shell">wifi-menu
+</code></pre>
+<h2 id="配置-locale"><a href="#配置-locale" class="headerlink" title="配置 locale"></a>配置 locale</h2><pre><code>vi /etc/locale.gen
+</code></pre><p>取消掉 en_US.UTF-8 和 zh_CN.UTF-8 的注释</p>
+<pre><code>locale-gen
+
+echo LANG=en_US.UTF-8 &gt; /etc/locale.conf
+</code></pre><h2 id="源"><a href="#源" class="headerlink" title="源"></a>源</h2><p>添加 archlinuxcn 源，在 <code>/etc/pacman.conf</code> 文件末尾加入如下内容：</p>
+<pre class=" language-shell"><code class="language-shell">[archlinuxcn]
+SigLevel = Optional TrustedOnly
+Server = http://repo.archlinuxcn.org/$arch
+</code></pre>
+<p>测速并替换默认镜像源：</p>
+<pre><code>pacman -S reflector # arch arm 源中无此包
+cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.bak
+reflector -l 5 --sort rate --save /etc/pacman.d/mirrorlist
+</code></pre><p>或直接添加清华源和中科大源：</p>
+<pre><code>Server = http://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/$arch/$repo
+Server = http://mirrors.ustc.edu.cn/archlinuxarm/$arch/$repo
+</code></pre><p>安装 keyring：</p>
+<pre><code>pacman -S archlinuxcn-keyring
+</code></pre><h2 id="yaourt"><a href="#yaourt" class="headerlink" title="yaourt"></a>yaourt</h2><p>树莓派中需要手工编译</p>
+<pre><code>pacman -S yaourt
+</code></pre><h2 id="build-essential"><a href="#build-essential" class="headerlink" title="build-essential"></a>build-essential</h2><pre><code>pacman -S base-devel cmake sudo htop bmon wget tmux
+</code></pre><h1 id="Backup"><a href="#Backup" class="headerlink" title="Backup"></a>Backup</h1><pre><code>dd if=/dev/disk3 bs=16m | gzip &gt; raspberrypi.img.gz
+</code></pre><h1 id="Refs"><a href="#Refs" class="headerlink" title="Refs"></a>Refs</h1><ul>
+<li><a href="https://www.cyberciti.biz/faq/howto-use-wipefs-to-wipe-a-signature-from-disk-on-linux/" target="_blank" rel="noopener">https://www.cyberciti.biz/faq/howto-use-wipefs-to-wipe-a-signature-from-disk-on-linux/</a></li>
+</ul>
+
+        
+                <blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;">
+                    <p><strong>
+                         
+                            This blog is under a <a href="/creativecommons.html" target="_blank">CC BY-NC-SA 3.0 Unported License</a>
+                        </strong>
+                        <br>
+                        <strong>Link to this article: </strong><a href="https://dragonkid.github.io/2017/12/01/Arch Configuration/">https://dragonkid.github.io/2017/12/01/Arch Configuration/</a>
+                    </p>
+                </blockquote>
+        
+    
+
     
 </div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2017/12/01/Python Best Practice/" id="post_nav-older" class="next-content">
+            Older
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
 
 
                     
@@ -813,6 +921,10 @@ It will not impact the appearance and can give developers a lot of support :)
 <!-- Import prettify js  -->
 
     
+        
+            <script>lsloader.load("prettify_js","/js/prettify.min.js?WN07fivHQSMKWy7BmHBB6w==", true)</script>
+        
+    
 
 
 
@@ -825,6 +937,11 @@ It will not impact the appearance and can give developers a lot of support :)
     });
 
     
+        
+            $(function() {
+                $('pre').addClass('prettyprint linenums').attr('style', 'overflow:auto;');
+                prettyPrint();
+                })
         
     
     

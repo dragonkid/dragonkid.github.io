@@ -3,6 +3,69 @@
   
     
     <entry>
+      <title><![CDATA[Arch On Raspberry Pi]]></title>
+      <url>/2017/12/01/Arch%20Configuration/</url>
+      <content type="html"><![CDATA[<p>Install arch to Raspberry Pi and the basic configuration of arch</p>
+<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><p>按照 <a href="https://archlinuxarm.org/platforms/armv6/raspberry-pi" target="_blank" rel="noopener">Arch Wiki</a> 中的步骤操作即可。</p>
+<h2 id="FAQ"><a href="#FAQ" class="headerlink" title="FAQ"></a>FAQ</h2><h3 id="mkfs-vfat-command-not-found"><a href="#mkfs-vfat-command-not-found" class="headerlink" title="mkfs.vfat: command not found"></a>mkfs.vfat: command not found</h3><pre><code>yaourt -S dosfstools    # for mkfs.vfat and mkfs.msdos
+yaourt -S ntfsprogs     # for mkfs.ntfs
+</code></pre><h3 id="Partition-1-contains-a-vfat-signature"><a href="#Partition-1-contains-a-vfat-signature" class="headerlink" title="Partition #1 contains a vfat signature"></a>Partition #1 contains a vfat signature</h3><blockquote>
+<p>Each disk and partition has some sort of signature and metadata/magic strings on it. The metadata used by operating system to configure disks or attach drivers and mount disks on your system. You can view such partition-table signatures/metadata/magic strings using the wipefs command. </p>
+</blockquote>
+<p>遇到上述提示选择 yes 即可。</p>
+<h2 id="网络"><a href="#网络" class="headerlink" title="网络"></a>网络</h2><p>配置树莓派的 <code>ethernet</code> 网卡为固定 IP，这样就可以在树莓派启动后直接通过 <code>ethernet</code> 网卡直连树莓派，对其进行配置。</p>
+<p>重新挂载 root 目录：</p>
+<pre><code>mount /dev/sdx2 root/
+</code></pre><p>编辑/创建如下文件，并将其修改为如下内容：</p>
+<pre><code>vi /etc/systemd/network/eth0.network
+</code></pre><pre><code>[Match]
+Name=eth0
+
+[Network]
+Address=192.168.1.100/24
+</code></pre><p>弹出 root 目录并保证数据正确写入：</p>
+<pre><code>umount root &amp;&amp; sync
+</code></pre><p>这样将就可以通过 <code>192.168.1.100</code> 这个 IP 与树莓派直连，并通过 ssh 进行登录完成后续配置过程。</p>
+<h1 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h1><h2 id="权限"><a href="#权限" class="headerlink" title="权限"></a>权限</h2><p>切换到 root 用户：</p>
+<pre><code>su - root   # sudo 命令需要后续通过包管理工具安装
+</code></pre><p>修改默认 alarm/root 用户密码：</p>
+<pre><code>passwd alarm
+passwd root
+</code></pre><h2 id="WIFI"><a href="#WIFI" class="headerlink" title="WIFI"></a>WIFI</h2><p>无线网卡型号：TP-LINK TL-WN725N USB无线网卡</p>
+<pre class=" language-shell"><code class="language-shell">wifi-menu
+</code></pre>
+<h2 id="配置-locale"><a href="#配置-locale" class="headerlink" title="配置 locale"></a>配置 locale</h2><pre><code>vi /etc/locale.gen
+</code></pre><p>取消掉 en_US.UTF-8 和 zh_CN.UTF-8 的注释</p>
+<pre><code>locale-gen
+
+echo LANG=en_US.UTF-8 &gt; /etc/locale.conf
+</code></pre><h2 id="源"><a href="#源" class="headerlink" title="源"></a>源</h2><p>添加 archlinuxcn 源，在 <code>/etc/pacman.conf</code> 文件末尾加入如下内容：</p>
+<pre class=" language-shell"><code class="language-shell">[archlinuxcn]
+SigLevel = Optional TrustedOnly
+Server = http://repo.archlinuxcn.org/$arch
+</code></pre>
+<p>测速并替换默认镜像源：</p>
+<pre><code>pacman -S reflector # arch arm 源中无此包
+cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.bak
+reflector -l 5 --sort rate --save /etc/pacman.d/mirrorlist
+</code></pre><p>或直接添加清华源和中科大源：</p>
+<pre><code>Server = http://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/$arch/$repo
+Server = http://mirrors.ustc.edu.cn/archlinuxarm/$arch/$repo
+</code></pre><p>安装 keyring：</p>
+<pre><code>pacman -S archlinuxcn-keyring
+</code></pre><h2 id="yaourt"><a href="#yaourt" class="headerlink" title="yaourt"></a>yaourt</h2><p>树莓派中需要手工编译</p>
+<pre><code>pacman -S yaourt
+</code></pre><h2 id="build-essential"><a href="#build-essential" class="headerlink" title="build-essential"></a>build-essential</h2><pre><code>pacman -S base-devel cmake sudo htop bmon wget tmux
+</code></pre><h1 id="Backup"><a href="#Backup" class="headerlink" title="Backup"></a>Backup</h1><pre><code>dd if=/dev/disk3 bs=16m | gzip &gt; raspberrypi.img.gz
+</code></pre><h1 id="Refs"><a href="#Refs" class="headerlink" title="Refs"></a>Refs</h1><ul>
+<li><a href="https://www.cyberciti.biz/faq/howto-use-wipefs-to-wipe-a-signature-from-disk-on-linux/" target="_blank" rel="noopener">https://www.cyberciti.biz/faq/howto-use-wipefs-to-wipe-a-signature-from-disk-on-linux/</a></li>
+</ul>
+]]></content>
+      
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Python Best Practice]]></title>
       <url>/2017/12/01/Python%20Best%20Practice/</url>
       <content type="html"><![CDATA[<h1 id="Python-编码规范"><a href="#Python-编码规范" class="headerlink" title="Python 编码规范"></a>Python 编码规范</h1><ul>
