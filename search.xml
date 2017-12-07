@@ -5,7 +5,7 @@
     <entry>
       <title><![CDATA[FTP on Ubuntu 14.04]]></title>
       <url>/2017/12/07/FTP%20on%20Ubuntu%2014.04/</url>
-      <content type="html"><![CDATA[<p>install and config vsftp on ubuntu 14.04</p>
+      <content type="html"><![CDATA[<p>Install and config vsftp on ubuntu 14.04</p>
 <h1 id="FTP-on-Ubuntu-14-04"><a href="#FTP-on-Ubuntu-14-04" class="headerlink" title="FTP on Ubuntu 14.04"></a>FTP on Ubuntu 14.04</h1><h2 id="install"><a href="#install" class="headerlink" title="install"></a>install</h2><pre><code>apt-get install vsftpd
 </code></pre><p>备份默认配置文件</p>
 <pre><code>cp /etc/vsftpd.conf /etc/vsftpd.conf.orig
