@@ -2,16 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://dragonkid.github.io/2017/12/07/FTP%20on%20Ubuntu%2014.04/</loc>
+    <loc>https://dragonkid.github.io/2017/12/09/steaming%20media%20on%20raspberrypi/</loc>
     
-    <lastmod>2017-12-07T06:19:39.865Z</lastmod>
+    <lastmod>2017-12-10T15:09:13.949Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://dragonkid.github.io/2017/12/01/Arch%20Configuration/</loc>
     
-    <lastmod>2017-12-03T06:27:18.766Z</lastmod>
+    <lastmod>2017-12-09T14:40:53.625Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://dragonkid.github.io/2017/12/07/FTP%20on%20Ubuntu%2014.04/</loc>
+    
+    <lastmod>2017-12-07T06:19:39.865Z</lastmod>
     
   </url>
   

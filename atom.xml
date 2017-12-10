@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://dragonkid.github.io/"/>
-  <updated>2017-12-07T06:19:39.865Z</updated>
+  <updated>2017-12-10T15:09:13.949Z</updated>
   <id>https://dragonkid.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Streaming Media Server on Raspberry Pi</title>
+    <link href="https://dragonkid.github.io/2017/12/09/steaming%20media%20on%20raspberrypi/"/>
+    <id>https://dragonkid.github.io/2017/12/09/steaming media on raspberrypi/</id>
+    <published>2017-12-09T14:46:38.038Z</published>
+    <updated>2017-12-10T15:09:13.949Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;Streaming-Media-Server-on-Raspberry-Pi&quot;&gt;&lt;a href=&quot;#Streaming-Media-Server-on-Raspberry-Pi&quot; class=&quot;headerlink&quot; title=&quot;Streaming Media Server on Raspberry Pi&quot;&gt;&lt;/a&gt;Streaming Media Server on Raspberry Pi&lt;/h1&gt;&lt;h2 id=&quot;Mount-Disk&quot;&gt;&lt;a href=&quot;#Mount-Disk&quot; class=&quot;headerlink&quot; title=&quot;Mount Disk&quot;&gt;&lt;/a&gt;Mount Disk&lt;/h2&gt;&lt;p&gt;增加对 NTFS 格式的支持：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;pacman -S
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>FTP on Ubuntu 14.04</title>
@@ -46,7 +69,7 @@
     <link href="https://dragonkid.github.io/2017/12/01/Arch%20Configuration/"/>
     <id>https://dragonkid.github.io/2017/12/01/Arch Configuration/</id>
     <published>2017-12-01T11:35:05.030Z</published>
-    <updated>2017-12-03T06:27:18.766Z</updated>
+    <updated>2017-12-09T14:40:53.625Z</updated>
     
     <summary type="html">
     
