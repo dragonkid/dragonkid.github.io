@@ -14,11 +14,22 @@ mount /dev/sda1 /mnt/external_disk/
 <pre><code>echo -ne &#39;/dev/sda1\t/mnt/external_disk/\tntfs-3g\tdefaults,noexec,umask=0000\t0\t0&#39; &gt;&gt; /etc/fstab
 </code></pre><h2 id="Minidlna"><a href="#Minidlna" class="headerlink" title="Minidlna"></a>Minidlna</h2><p>安装配置 minidlna，提供流媒体服务。</p>
 <pre><code>pacman -S minidlna
+</code></pre><p>minidlna 默认没有提供对 rm/rmvb 类型视频文件的支持，可以通过安装 AUR 源中的 <code>readymedia-transcode-git</code> 包解决此问题。能手工编译安装步骤如下：</p>
+<pre><code>wget https://aur.archlinux.org/cgit/aur.git/snapshot/readymedia-transcode-git.tar.gz
+tar zxvf readymedia-transcode-git.tar.gz
+makepkg -Acs
+
+# 解决 fatal error: wand/MagickWand.h: No such file or directory 问题
+pacman -S pkg-config
+ln -sf /usr/include/ImageMagick-7/MagickWand /usr/include/ImageMagick-7/wand
 </code></pre><p>编辑配置文件 <code>/etc/minidlna.conf</code>，并修改如下配置：</p>
 <pre><code>network_interface=wlan0
 root_container=B
 friendly_name=xxxx
-media_dir=/mnt/Videos
+media_dir=V,/mnt/external_disk/Videos
+db_dir=/var/cache/minidlna
+</code></pre><p>还需配置如下参数，否则可能导致 inotify 构建播放列表失败，重启后生效。</p>
+<pre><code>echo &#39;fs.inotify.max_user_watches = 100000&#39; &gt;&gt; /etc/sysctl.d/90-inotify.conf
 </code></pre><p>设置 minidlna 开机启动并启动服务：</p>
 <pre><code>systemctl enable minidlna
 systemctl start minidlna
