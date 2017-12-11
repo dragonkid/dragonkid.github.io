@@ -14,7 +14,10 @@ mount /dev/sda1 /mnt/external_disk/
 <pre><code>echo -ne &#39;/dev/sda1\t/mnt/external_disk/\tntfs-3g\tdefaults,noexec,umask=0000\t0\t0&#39; &gt;&gt; /etc/fstab
 </code></pre><h2 id="Minidlna"><a href="#Minidlna" class="headerlink" title="Minidlna"></a>Minidlna</h2><p>安装配置 minidlna，提供流媒体服务。</p>
 <pre><code>pacman -S minidlna
-</code></pre><p>minidlna 默认没有提供对 rm/rmvb 类型视频文件的支持，可以通过安装 AUR 源中的 <code>readymedia-transcode-git</code> 包解决此问题。能手工编译安装步骤如下：</p>
+</code></pre><p>or</p>
+<pre><code>yaourt -S readymedia-transcode-git
+</code></pre><p>minidlna 默认没有提供对 rm/rmvb 类型视频文件的支持，可以通过安装 AUR 源中的 <code>readymedia-transcode-git</code> 包解决此问题。</p>
+<p>手工编译安装步骤如下：</p>
 <pre><code>wget https://aur.archlinux.org/cgit/aur.git/snapshot/readymedia-transcode-git.tar.gz
 tar zxvf readymedia-transcode-git.tar.gz
 makepkg -Acs
@@ -43,7 +46,7 @@ systemctl start minidlna
         netbios name = XiaoZhuTVSmb
         server string = XiaoZhuTV Samba server
         security = user
-[smbfolder]
+[Movies]
         path = /mnt/external_disk/Videos
         valid users = god
         public = no
