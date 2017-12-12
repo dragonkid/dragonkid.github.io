@@ -249,7 +249,7 @@
 
     
         <meta property="article:published_time" content="Fri Dec 01 2017 19:35:05 GMT+0800" />
-        <meta property="article:modified_time" content="Sat Dec 09 2017 22:40:53 GMT+0800" />
+        <meta property="article:modified_time" content="Tue Dec 12 2017 18:21:05 GMT+0800" />
     
 
     <!-- The Twitter Card protocol -->
@@ -276,7 +276,7 @@
     "mainEntityOfPage": "https://dragonkid.github.io/2017/12/01/Arch Configuration/index.html",
     "headline": "Arch on Raspberry Pi",
     "datePublished": "Fri Dec 01 2017 19:35:05 GMT+0800",
-    "dateModified": "Sat Dec 09 2017 22:40:53 GMT+0800",
+    "dateModified": "Tue Dec 12 2017 18:21:05 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "DragonKid",
@@ -529,8 +529,8 @@ yaourt -S ntfsprogs     # for mkfs.ntfs
 <h2 id="网络"><a href="#网络" class="headerlink" title="网络"></a>网络</h2><p>配置树莓派的 <code>ethernet</code> 网卡为固定 IP，这样就可以在树莓派启动后直接通过 <code>ethernet</code> 网卡直连树莓派，对其进行配置。</p>
 <p>重新挂载 root 目录：</p>
 <pre><code>mount /dev/sdx2 root/
-</code></pre><p>编辑/创建如下文件，并将其修改为如下内容：</p>
-<pre><code>vi /etc/systemd/network/eth0.network
+</code></pre><p>进入 root 目录，编辑/创建如下文件，并将其修改为如下内容：</p>
+<pre><code>vi etc/systemd/network/eth0.network
 </code></pre><pre><code>[Match]
 Name=eth0
 
