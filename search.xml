@@ -4,7 +4,7 @@
     
     <entry>
       <title><![CDATA[Streaming Media Server on Raspberry Pi]]></title>
-      <url>/2017/12/09/steaming%20media%20on%20raspberrypi/</url>
+      <url>/2017/12/09/Streaming%20Media%20Server%20on%20Raspberry%20Pi/</url>
       <content type="html"><![CDATA[<p>Deploy streaming media server on Raspberry Pi with Arch linux.</p>
 <h1 id="Streaming-Media-Server-on-Raspberry-Pi"><a href="#Streaming-Media-Server-on-Raspberry-Pi" class="headerlink" title="Streaming Media Server on Raspberry Pi"></a>Streaming Media Server on Raspberry Pi</h1><h2 id="Mount-Disk"><a href="#Mount-Disk" class="headerlink" title="Mount Disk"></a>Mount Disk</h2><p>增加对 NTFS 格式的支持：</p>
 <pre><code>pacman -S ntfs-3g
