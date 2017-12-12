@@ -249,7 +249,7 @@
 
     
         <meta property="article:published_time" content="Sat Dec 09 2017 22:46:38 GMT+0800" />
-        <meta property="article:modified_time" content="Mon Dec 11 2017 13:29:08 GMT+0800" />
+        <meta property="article:modified_time" content="Tue Dec 12 2017 10:16:20 GMT+0800" />
     
 
     <!-- The Twitter Card protocol -->
@@ -276,7 +276,7 @@
     "mainEntityOfPage": "https://dragonkid.github.io/2017/12/09/steaming media on raspberrypi/index.html",
     "headline": "Streaming Media Server on Raspberry Pi",
     "datePublished": "Sat Dec 09 2017 22:46:38 GMT+0800",
-    "dateModified": "Mon Dec 11 2017 13:29:08 GMT+0800",
+    "dateModified": "Tue Dec 12 2017 10:16:20 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "DragonKid",
@@ -518,7 +518,8 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <h1 id="Streaming-Media-Server-on-Raspberry-Pi"><a href="#Streaming-Media-Server-on-Raspberry-Pi" class="headerlink" title="Streaming Media Server on Raspberry Pi"></a>Streaming Media Server on Raspberry Pi</h1><h2 id="Mount-Disk"><a href="#Mount-Disk" class="headerlink" title="Mount Disk"></a>Mount Disk</h2><p>增加对 NTFS 格式的支持：</p>
+        <p>Deploy streaming media server on Raspberry Pi with Arch linux.</p>
+<h1 id="Streaming-Media-Server-on-Raspberry-Pi"><a href="#Streaming-Media-Server-on-Raspberry-Pi" class="headerlink" title="Streaming Media Server on Raspberry Pi"></a>Streaming Media Server on Raspberry Pi</h1><h2 id="Mount-Disk"><a href="#Mount-Disk" class="headerlink" title="Mount Disk"></a>Mount Disk</h2><p>增加对 NTFS 格式的支持：</p>
 <pre><code>pacman -S ntfs-3g
 </code></pre><p>创建挂载目录并挂载移动硬盘：</p>
 <pre><code>mkdir /mnt/external_disk
@@ -529,26 +530,60 @@ mount /dev/sda1 /mnt/external_disk/
 <pre><code>pacman -S minidlna
 </code></pre><p>or</p>
 <pre><code>yaourt -S readymedia-transcode-git
-</code></pre><p>minidlna 默认没有提供对 rm/rmvb 类型视频文件的支持，可以通过安装 AUR 源中的 <code>readymedia-transcode-git</code> 包解决此问题。</p>
-<p>手工编译安装步骤如下：</p>
-<pre><code>wget https://aur.archlinux.org/cgit/aur.git/snapshot/readymedia-transcode-git.tar.gz
-tar zxvf readymedia-transcode-git.tar.gz
-makepkg -Acs
-
-# 解决 fatal error: wand/MagickWand.h: No such file or directory 问题
-pacman -S pkg-config
-ln -sf /usr/include/ImageMagick-7/MagickWand /usr/include/ImageMagick-7/wand
 </code></pre><p>编辑配置文件 <code>/etc/minidlna.conf</code>，并修改如下配置：</p>
 <pre><code>network_interface=wlan0
 root_container=B
 friendly_name=xxxx
 media_dir=V,/mnt/external_disk/Videos
-db_dir=/var/cache/minidlna
 </code></pre><p>还需配置如下参数，否则可能导致 inotify 构建播放列表失败，重启后生效。</p>
 <pre><code>echo &#39;fs.inotify.max_user_watches = 100000&#39; &gt;&gt; /etc/sysctl.d/90-inotify.conf
-</code></pre><p>设置 minidlna 开机启动并启动服务：</p>
+</code></pre><p>设置 minidlna 开机启动 &amp; 启动服务：</p>
 <pre><code>systemctl enable minidlna
 systemctl start minidlna
+</code></pre><p>minidlna 默认没有提供对 rm/rmvb 类型视频文件的支持，需修改代码后手工编译。</p>
+<p>使用 minidlna 1.2.1 版本，修改代码如下：</p>
+<p>metadata.c</p>
+<pre><code>else if( strncmp(ctx-&gt;iformatctx-&gt;name, &quot;matroska&quot;, 8) == 0 )  
+    xasprintf(&amp;m.mime, &quot;video/x-matroska&quot;);  
+else if( strcmp(ctx-&gt;iformatctx-&gt;name, &quot;flv&quot;) == 0 )  
+    xasprintf(&amp;m.mime, &quot;video/x-flv&quot;);  
+//----add----  
+else if( strcmp(ctx-&gt;iformat-&gt;name, &quot;rm&quot;) == 0 )  
+    xasprintf(&amp;m.mime, &quot;video/x-pn-realvideo&quot;);  
+else if( strcmp(ctx-&gt;iformat-&gt;name, &quot;rmvb&quot;) == 0 )  
+    xasprintf(&amp;m.mime, &quot;video/x-pn-realvideo&quot;);  
+//----end---- 
+if( m.mime )  
+    goto video_nodlna;
+</code></pre><p>upnpglobalvars.h</p>
+<pre><code>&quot;http-get:*:audio/mp4:*,&quot; \  
+&quot;http-get:*:audio/x-wav:*,&quot; \  
+&quot;http-get:*:audio/x-flac:*,&quot; \  
+&quot;http-get:*:application/ogg:*,&quot; \  
+//----add----  
+&quot;http-get:*:video/x-pn-realvideo:*&quot;  
+//----end----
+</code></pre><p>utils.c</p>
+<pre><code>ends_with(file, &quot;.m2t&quot;) || ends_with(file, &quot;.mkv&quot;)   ||  
+ends_with(file, &quot;.vob&quot;) || ends_with(file, &quot;.ts&quot;)    ||  
+ends_with(file, &quot;.flv&quot;) || ends_with(file, &quot;.xvid&quot;)  ||  
+//----add----  
+ends_with(file, &quot;.rm&quot;)  || ends_with(file, &quot;.rmvb&quot;)  ||  
+//----end----  
+#ifdef TIVO_SUPPORT  
+ends_with(file, &quot;.TiVo&quot;) ||  
+#endif  
+ends_with(file, &quot;.mov&quot;) || ends_with(file, &quot;.3gp&quot;));
+</code></pre><p>手工编译安装步骤如下：</p>
+<pre><code># 包依赖
+pacman -S ffmpeg libexif libjpeg libid3tag flac libvorbis sqlite
+./autogen.sh
+./configure --prefix=/usr --sbindir=/usr/bin
+make &amp;&amp; make install
+
+# 解决 fatal error: wand/MagickWand.h: No such file or directory 问题
+pacman -S pkg-config
+ln -sf /usr/include/ImageMagick-7/MagickWand /usr/include/ImageMagick-7/wand
 </code></pre><h2 id="Samba"><a href="#Samba" class="headerlink" title="Samba"></a>Samba</h2><p>安装配置 samba 服务，便于上传文件。</p>
 <pre><code>pacman -S samba
 </code></pre><p>编辑配置文件：</p>

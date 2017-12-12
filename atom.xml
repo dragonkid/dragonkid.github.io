@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://dragonkid.github.io/"/>
-  <updated>2017-12-11T05:29:08.355Z</updated>
+  <updated>2017-12-12T02:16:20.748Z</updated>
   <id>https://dragonkid.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://dragonkid.github.io/2017/12/09/steaming%20media%20on%20raspberrypi/"/>
     <id>https://dragonkid.github.io/2017/12/09/steaming media on raspberrypi/</id>
     <published>2017-12-09T14:46:38.038Z</published>
-    <updated>2017-12-11T05:29:08.355Z</updated>
+    <updated>2017-12-12T02:16:20.748Z</updated>
     
     <summary type="html">
     
@@ -29,8 +29,8 @@
       
         
         
-          &lt;h1 id=&quot;Streaming-Media-Server-on-Raspberry-Pi&quot;&gt;&lt;a href=&quot;#Streaming-Media-Server-on-Raspberry-Pi&quot; class=&quot;headerlink&quot; title=&quot;Streaming Media Server on Raspberry Pi&quot;&gt;&lt;/a&gt;Streaming Media Server on Raspberry Pi&lt;/h1&gt;&lt;h2 id=&quot;Mount-Disk&quot;&gt;&lt;a href=&quot;#Mount-Disk&quot; class=&quot;headerlink&quot; title=&quot;Mount Disk&quot;&gt;&lt;/a&gt;Mount Disk&lt;/h2&gt;&lt;p&gt;增加对 NTFS 格式的支持：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;pacman -S
+          &lt;p&gt;Deploy streaming media server on Raspberry Pi with Arch linux.&lt;/p&gt;
+&lt;h1 id=&quot;Streaming-Media-Server-on-Raspberry-Pi&quot;&gt;&lt;a href=&quot;#Streaming-Media-Server-on-Raspberry-Pi&quot; class=&quot;headerlink&quot; title=&quot;Streaming Media Server on Raspberry Pi&quot;&gt;&lt;/a&gt;Streaming Media Server on Raspberry Pi&lt;/h1&gt;&lt;h2 id=&quot;Mount-Disk&quot;&gt;&lt;a href=&quot;#Mount-Disk&quot; class=&quot;headerlink&quot; title=&quot;Mount Disk&quot;&gt;&lt;/a&gt;Mount Disk&lt;/h2&gt;&lt;p&gt;增加对 NTFS
         
       
     
