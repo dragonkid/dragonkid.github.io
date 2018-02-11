@@ -69,6 +69,8 @@ NoNewPrivileges=on
 
 [Install]
 WantedBy=multi-user.target
+</code></pre><pre><code>systemctl daemon-reload
+systemctl start thunder-portal.service &amp;&amp; systemctl enable thunder-portal.service
 </code></pre>]]></content>
       
         
