@@ -39,7 +39,7 @@
     
     <title>
         
-            FTP on Ubuntu 14.04 | 
+            Xware on Raspberry Pi | 
         
         DragonKid&#39;s Blog
     </title>
@@ -242,18 +242,18 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="https://dragonkid.github.io">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="FTP on Ubuntu 14.04 | DragonKid&#39;s Blog">
+    <meta property="og:title" content="Xware on Raspberry Pi | DragonKid&#39;s Blog">
     <meta property="og:image" content="https://dragonkid.github.io/img/favicon.png" />
     <meta property="og:description" content="">
     
 
     
-        <meta property="article:published_time" content="Thu Dec 07 2017 13:19:30 GMT+0800" />
-        <meta property="article:modified_time" content="Thu Dec 07 2017 14:19:39 GMT+0800" />
+        <meta property="article:published_time" content="Wed Jan 24 2018 11:25:47 GMT+0800" />
+        <meta property="article:modified_time" content="Mon Feb 12 2018 00:00:01 GMT+0800" />
     
 
     <!-- The Twitter Card protocol -->
-    <meta name="twitter:title" content="FTP on Ubuntu 14.04 | DragonKid&#39;s Blog">
+    <meta name="twitter:title" content="Xware on Raspberry Pi | DragonKid&#39;s Blog">
     <meta name="twitter:description" content="">
     <meta name="twitter:image" content="https://dragonkid.github.io/img/favicon.png">
     <meta name="twitter:card" content="summary_large_image" />
@@ -261,7 +261,7 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="https://dragonkid.github.io/2017/12/07/FTP on Ubuntu 14.04/index.html" />
+        <link rel="canonical" href="https://dragonkid.github.io/2018/01/24/Xware on Raspberry Pi/index.html" />
     
 
     <!-- Structured-data for SEO -->
@@ -273,10 +273,10 @@
 {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "mainEntityOfPage": "https://dragonkid.github.io/2017/12/07/FTP on Ubuntu 14.04/index.html",
-    "headline": "FTP on Ubuntu 14.04",
-    "datePublished": "Thu Dec 07 2017 13:19:30 GMT+0800",
-    "dateModified": "Thu Dec 07 2017 14:19:39 GMT+0800",
+    "mainEntityOfPage": "https://dragonkid.github.io/2018/01/24/Xware on Raspberry Pi/index.html",
+    "headline": "Xware on Raspberry Pi",
+    "datePublished": "Wed Jan 24 2018 11:25:47 GMT+0800",
+    "dateModified": "Mon Feb 12 2018 00:00:01 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "DragonKid",
@@ -368,7 +368,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#FTP-on-Ubuntu-14-04"><span class="post-toc-number">1.</span> <span class="post-toc-text">FTP on Ubuntu 14.04</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#install"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">install</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#iptables"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">iptables</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#User-Directory"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">User Directory</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Configuring-FTP-Access"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">Configuring FTP Access</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Restart-vsftpd"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">Restart vsftpd</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Refs"><span class="post-toc-number">1.6.</span> <span class="post-toc-text">Refs</span></a></li></ol></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Xware-on-Raspberry-Pi"><span class="post-toc-number">1.</span> <span class="post-toc-text">Xware on Raspberry Pi</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Install-Xware"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">Install Xware</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Active-Code"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">Active Code</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Activate-Downloader"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">Activate Downloader</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Config-Download-Path"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">Config Download Path</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Auto-Start"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">Auto Start</span></a></li></ol></li></ol>
     </ul>
     
 
@@ -400,7 +400,7 @@
         
     
             <p class="article-headline-p">
-                FTP on Ubuntu 14.04
+                Xware on Raspberry Pi
             </p>
         </div>
 
@@ -419,7 +419,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>DragonKid</strong>
-        <span>Dec 07, 2017</span>
+        <span>Jan 24, 2018</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -461,7 +461,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=FTP on Ubuntu 14.04&url=https://dragonkid.github.io/2017/12/07/FTP on Ubuntu 14.04/index.html&pic=https://dragonkid.github.io/img/favicon.png&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Xware on Raspberry Pi&url=https://dragonkid.github.io/2018/01/24/Xware on Raspberry Pi/index.html&pic=https://dragonkid.github.io/img/favicon.png&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 Share to Weibo
             </li>
@@ -470,7 +470,7 @@
 
     <!-- Share Twitter -->
     
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=FTP on Ubuntu 14.04&url=https://dragonkid.github.io/2017/12/07/FTP on Ubuntu 14.04/index.html&via=DragonKid" target="_blank">
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Xware on Raspberry Pi&url=https://dragonkid.github.io/2018/01/24/Xware on Raspberry Pi/index.html&via=DragonKid" target="_blank">
             <li class="mdl-menu__item">
                 Share to Twitter
             </li>
@@ -479,7 +479,7 @@
 
     <!-- Share Facebook -->
     
-        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=https://dragonkid.github.io/2017/12/07/FTP on Ubuntu 14.04/index.html" target="_blank">
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=https://dragonkid.github.io/2018/01/24/Xware on Raspberry Pi/index.html" target="_blank">
             <li class="mdl-menu__item">
                 Share to Facebook
             </li>
@@ -488,7 +488,7 @@
 
     <!-- Share Google+ -->
     
-        <a class="post_share-link" href="https://plus.google.com/share?url=https://dragonkid.github.io/2017/12/07/FTP on Ubuntu 14.04/index.html" target="_blank">
+        <a class="post_share-link" href="https://plus.google.com/share?url=https://dragonkid.github.io/2018/01/24/Xware on Raspberry Pi/index.html" target="_blank">
             <li class="mdl-menu__item">
                 Share to Google+
             </li>
@@ -503,7 +503,7 @@
 
     <!-- Share Telegram -->
     
-        <a class="post_share-link" href="https://telegram.me/share/url?url=https://dragonkid.github.io/2017/12/07/FTP on Ubuntu 14.04/index.html&text=FTP on Ubuntu 14.04" target="_blank">
+        <a class="post_share-link" href="https://telegram.me/share/url?url=https://dragonkid.github.io/2018/01/24/Xware on Raspberry Pi/index.html&text=Xware on Raspberry Pi" target="_blank">
             <li class="mdl-menu__item">
                 Share to Telegram
             </li>
@@ -518,47 +518,71 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <p>Install and config vsftp on ubuntu 14.04</p>
-<h1 id="FTP-on-Ubuntu-14-04"><a href="#FTP-on-Ubuntu-14-04" class="headerlink" title="FTP on Ubuntu 14.04"></a>FTP on Ubuntu 14.04</h1><h2 id="install"><a href="#install" class="headerlink" title="install"></a>install</h2><pre><code>apt-get install vsftpd
-</code></pre><p>备份默认配置文件</p>
-<pre><code>cp /etc/vsftpd.conf /etc/vsftpd.conf.orig
-</code></pre><h2 id="iptables"><a href="#iptables" class="headerlink" title="iptables"></a>iptables</h2><p>We’ll need to open ports 20 and 21 for FTP, port 990 for later when we enable TLS, and ports 40000-50000 for the range of passive ports.</p>
-<pre><code>-A INPUT -i eth0 -p tcp -m tcp --dport 20 -j ACCEPT
--A INPUT -i eth0 -p tcp -m tcp --dport 21 -j ACCEPT
--A INPUT -i eth0 -p tcp -m tcp --dport 990 -j ACCEPT
--A INPUT -i eth0 -p tcp -m tcp --dport 40000:50000 -j ACCEPT
-</code></pre><h2 id="User-Directory"><a href="#User-Directory" class="headerlink" title="User Directory"></a>User Directory</h2><p>添加用户，用户名自定义，设置密码后一路回车。</p>
-<pre><code>useradd transfer
-</code></pre><p>FTP is generally more secure when users are restricted to a specific directory.vsftpd accomplishes this with chroot jails. When chroot is enabled for local users, they are restricted to their home directory by default. However, because of the way vsftpd secures the directory, it must not be writable by the user. This is fine for a new user who should only connect via FTP, but an existing user may need to write to their home folder if they also shell access.</p>
-<p>In this example, rather than removing write privileges from the home directory, we’re will create an ftp directory to serve as the chroot and a writable files directory to hold the actual files.</p>
-<pre><code>mkdir -p /home/transfer/ftp
-chown nobody:nogroup /home/transfer/ftp
-chmod a-w /home/transfer/ftp
-</code></pre><p>Next, we’ll create the directory where files can be uploaded and assign ownership to the user.</p>
-<pre><code>mkdir -p /home/transfer/ftp/files
-chown transfer:transfer /home/transfer/ftp/files/
-</code></pre><h2 id="Configuring-FTP-Access"><a href="#Configuring-FTP-Access" class="headerlink" title="Configuring FTP Access"></a>Configuring FTP Access</h2><p>编辑文件 <code>/etc/vsftpd.conf</code>，修改/添加如下配置后保存并退出。</p>
-<pre><code>write_enable=YES
-chroot_local_user=YES
+        <p>Use Raspberry Pi as Thunder remote downloader.</p>
+<h1 id="Xware-on-Raspberry-Pi"><a href="#Xware-on-Raspberry-Pi" class="headerlink" title="Xware on Raspberry Pi"></a>Xware on Raspberry Pi</h1><p>Xware 是迅雷开发的一款远程下载固件，可以使用其在树莓派上自行搭建迅雷远程下载器。</p>
+<h2 id="Install-Xware"><a href="#Install-Xware" class="headerlink" title="Install Xware"></a>Install Xware</h2><pre><code>take /usr/share/thunder
+wget -c https://raw.githubusercontent.com/snail007/xware/master/Xware_armel_v5te_glibc.tar.gz
+tar zxvf Xware_armel_v5te_glibc.tar.gz
+</code></pre><h2 id="Active-Code"><a href="#Active-Code" class="headerlink" title="Active Code"></a>Active Code</h2><pre><code>[root@alarmpi thunder]# ./portal
+initing...
 
-pasv_min_port=40000
-pasv_max_port=50000
+try stopping xunlei service...
+killall: ETMDaemon: no process killed
+killall: EmbedThunderManager: no process killed
 
-# We’ll add a user_sub_token in order to insert the username in our local_root directory path so our configuration will work for this user and any future users that might be added.
-user_sub_token=$USER
-local_root=/home/$USER/ftp
+setting xunlei runtime env...
+port: 9000 is usable.
 
-# Since we’re only planning to allow FTP access on a case-by-case basis, we’ll set up the configuration so that access is given to a user only when they are explicitly added to a list rather than by default.
-userlist_enable=YES
-userlist_file=/etc/vsftpd.userlist
-userlist_deny=NO
-</code></pre><p>添加 ftp 用户到 vsftpd.userlist。</p>
-<pre><code>echo &quot;transfer&quot; | tee /etc/vsftpd.userlist
-</code></pre><h2 id="Restart-vsftpd"><a href="#Restart-vsftpd" class="headerlink" title="Restart vsftpd"></a>Restart vsftpd</h2><pre><code>service vsftpd restart
-</code></pre><h2 id="Refs"><a href="#Refs" class="headerlink" title="Refs"></a>Refs</h2><ul>
-<li><a href="https://www.digitalocean.com/community/tutorials/how-to-set-up-vsftpd-for-a-user-s-directory-on-ubuntu-16-04" target="_blank" rel="noopener">https://www.digitalocean.com/community/tutorials/how-to-set-up-vsftpd-for-a-user-s-directory-on-ubuntu-16-04</a></li>
-</ul>
+YOUR CONTROL PORT IS: 9000
 
+
+starting xunlei service...
+execv: /root/thunder/lib/ETMDaemon.
+
+getting xunlei service info...
+Connecting to 127.0.0.1:9000 (127.0.0.1:9000)
+xunlei_portal.tmp        0T --:--:-- ETA
+the active key is not valid.
+
+try again...(has tried 1 time(s)).
+getting xunlei service info...
+Connecting to 127.0.0.1:9000 (127.0.0.1:9000)
+xunlei_portal.tmp        0T --:--:-- ETA
+
+THE ACTIVE CODE IS: abcdef
+
+go to http://yuancheng.xunlei.com, bind your device with the active code.
+finished.
+</code></pre><p>其中 <code>THE ACTIVE CODE IS</code> 后的既是设备激活码。</p>
+<h2 id="Activate-Downloader"><a href="#Activate-Downloader" class="headerlink" title="Activate Downloader"></a>Activate Downloader</h2><p>登陆 <code>http://yuancheng.xunlei.com/</code>，添加下载器，输入激活码绑定即可。</p>
+<h2 id="Config-Download-Path"><a href="#Config-Download-Path" class="headerlink" title="Config Download Path"></a>Config Download Path</h2><p>Xware 默认使用已经存在的挂载点作为下载目录，该下载目录也可以自行配置。</p>
+<p>创建新的挂载点：</p>
+<pre><code>mount --bind /data/TDDOWNLOAD /mnt/TDDOWNLOAD
+</code></pre><p>在 <code>~/thunder</code> 目录下创建 <code>etc</code> 目录，编辑文件 <code>thunder_mounts.cfg</code> 如下：</p>
+<pre><code>avaliable_mount_path_pattern
+{
+    /mnt/TDDOWNLOAD
+}
+</code></pre><p>重启路由器固件即可。</p>
+<h2 id="Auto-Start"><a href="#Auto-Start" class="headerlink" title="Auto Start"></a>Auto Start</h2><pre><code>vi /usr/lib/systemd/system/thunder-portal.service
+
+[Unit]
+Description=thunder remote downloader
+After=mnt-external_disk.mount network.service
+
+[Service]
+Type=oneshot
+User=root
+Group=root
+ExecStart=/usr/share/thunder/portal
+RemainAfterExit=true
+ExecStop=/usr/share/thunder/portal
+ProtectHome=on
+NoNewPrivileges=on
+
+[Install]
+WantedBy=multi-user.target
+</code></pre>
         
                 <blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;">
                     <p><strong>
@@ -566,7 +590,7 @@ userlist_deny=NO
                             This blog is under a <a href="/creativecommons.html" target="_blank">CC BY-NC-SA 3.0 Unported License</a>
                         </strong>
                         <br>
-                        <strong>Link to this article: </strong><a href="https://dragonkid.github.io/2017/12/07/FTP on Ubuntu 14.04/">https://dragonkid.github.io/2017/12/07/FTP on Ubuntu 14.04/</a>
+                        <strong>Link to this article: </strong><a href="https://dragonkid.github.io/2018/01/24/Xware on Raspberry Pi/">https://dragonkid.github.io/2018/01/24/Xware on Raspberry Pi/</a>
                     </p>
                 </blockquote>
         
@@ -588,21 +612,13 @@ userlist_deny=NO
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/2017/12/09/Streaming Media Server on Raspberry Pi/" id="post_nav-newer" class="prev-content">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
-                <i class="material-icons">arrow_back</i>
-            </button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            Newer
-        </a>
-    
 
     <!-- Section Spacer -->
     <div class="section-spacer"></div>
 
     <!-- Next Nav -->
     
-        <a href="/2017/12/01/Arch Configuration/" id="post_nav-older" class="next-content">
+        <a href="/2017/12/09/Streaming Media Server on Raspberry Pi/" id="post_nav-older" class="next-content">
             Older
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">

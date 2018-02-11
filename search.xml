@@ -3,6 +3,78 @@
   
     
     <entry>
+      <title><![CDATA[Xware on Raspberry Pi]]></title>
+      <url>/2018/01/24/Xware%20on%20Raspberry%20Pi/</url>
+      <content type="html"><![CDATA[<p>Use Raspberry Pi as Thunder remote downloader.</p>
+<h1 id="Xware-on-Raspberry-Pi"><a href="#Xware-on-Raspberry-Pi" class="headerlink" title="Xware on Raspberry Pi"></a>Xware on Raspberry Pi</h1><p>Xware 是迅雷开发的一款远程下载固件，可以使用其在树莓派上自行搭建迅雷远程下载器。</p>
+<h2 id="Install-Xware"><a href="#Install-Xware" class="headerlink" title="Install Xware"></a>Install Xware</h2><pre><code>take /usr/share/thunder
+wget -c https://raw.githubusercontent.com/snail007/xware/master/Xware_armel_v5te_glibc.tar.gz
+tar zxvf Xware_armel_v5te_glibc.tar.gz
+</code></pre><h2 id="Active-Code"><a href="#Active-Code" class="headerlink" title="Active Code"></a>Active Code</h2><pre><code>[root@alarmpi thunder]# ./portal
+initing...
+
+try stopping xunlei service...
+killall: ETMDaemon: no process killed
+killall: EmbedThunderManager: no process killed
+
+setting xunlei runtime env...
+port: 9000 is usable.
+
+YOUR CONTROL PORT IS: 9000
+
+
+starting xunlei service...
+execv: /root/thunder/lib/ETMDaemon.
+
+getting xunlei service info...
+Connecting to 127.0.0.1:9000 (127.0.0.1:9000)
+xunlei_portal.tmp        0T --:--:-- ETA
+the active key is not valid.
+
+try again...(has tried 1 time(s)).
+getting xunlei service info...
+Connecting to 127.0.0.1:9000 (127.0.0.1:9000)
+xunlei_portal.tmp        0T --:--:-- ETA
+
+THE ACTIVE CODE IS: abcdef
+
+go to http://yuancheng.xunlei.com, bind your device with the active code.
+finished.
+</code></pre><p>其中 <code>THE ACTIVE CODE IS</code> 后的既是设备激活码。</p>
+<h2 id="Activate-Downloader"><a href="#Activate-Downloader" class="headerlink" title="Activate Downloader"></a>Activate Downloader</h2><p>登陆 <code>http://yuancheng.xunlei.com/</code>，添加下载器，输入激活码绑定即可。</p>
+<h2 id="Config-Download-Path"><a href="#Config-Download-Path" class="headerlink" title="Config Download Path"></a>Config Download Path</h2><p>Xware 默认使用已经存在的挂载点作为下载目录，该下载目录也可以自行配置。</p>
+<p>创建新的挂载点：</p>
+<pre><code>mount --bind /data/TDDOWNLOAD /mnt/TDDOWNLOAD
+</code></pre><p>在 <code>~/thunder</code> 目录下创建 <code>etc</code> 目录，编辑文件 <code>thunder_mounts.cfg</code> 如下：</p>
+<pre><code>avaliable_mount_path_pattern
+{
+    /mnt/TDDOWNLOAD
+}
+</code></pre><p>重启路由器固件即可。</p>
+<h2 id="Auto-Start"><a href="#Auto-Start" class="headerlink" title="Auto Start"></a>Auto Start</h2><pre><code>vi /usr/lib/systemd/system/thunder-portal.service
+
+[Unit]
+Description=thunder remote downloader
+After=mnt-external_disk.mount network.service
+
+[Service]
+Type=oneshot
+User=root
+Group=root
+ExecStart=/usr/share/thunder/portal
+RemainAfterExit=true
+ExecStop=/usr/share/thunder/portal
+ProtectHome=on
+NoNewPrivileges=on
+
+[Install]
+WantedBy=multi-user.target
+</code></pre>]]></content>
+      
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Streaming Media Server on Raspberry Pi]]></title>
       <url>/2017/12/09/Streaming%20Media%20Server%20on%20Raspberry%20Pi/</url>
       <content type="html"><![CDATA[<p>Deploy streaming media server on Raspberry Pi with Arch linux.</p>
@@ -193,10 +265,11 @@ reflector -l 5 --sort rate --save /etc/pacman.d/mirrorlist
 <pre><code>Server = http://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/$arch/$repo
 Server = http://mirrors.ustc.edu.cn/archlinuxarm/$arch/$repo
 </code></pre><p>安装 keyring：</p>
-<pre><code>pacman -S archlinuxcn-keyring
+<pre><code>pacman -S archlinux-keyring
+pacman -S archlinuxcn-keyring
 </code></pre><h2 id="yaourt"><a href="#yaourt" class="headerlink" title="yaourt"></a>yaourt</h2><p>树莓派中需要手工编译</p>
 <pre><code>pacman -S yaourt
-</code></pre><h2 id="build-essential"><a href="#build-essential" class="headerlink" title="build-essential"></a>build-essential</h2><pre><code>pacman -S base-devel cmake sudo htop bmon wget tmux
+</code></pre><h2 id="build-essential"><a href="#build-essential" class="headerlink" title="build-essential"></a>build-essential</h2><pre><code>pacman -S mlocate base-devel cmake sudo htop bmon wget tmux
 </code></pre><h1 id="Backup"><a href="#Backup" class="headerlink" title="Backup"></a>Backup</h1><pre><code>dd if=/dev/disk3 bs=16m | gzip &gt; raspberrypi.img.gz
 </code></pre><h1 id="Refs"><a href="#Refs" class="headerlink" title="Refs"></a>Refs</h1><ul>
 <li><a href="https://www.cyberciti.biz/faq/howto-use-wipefs-to-wipe-a-signature-from-disk-on-linux/" target="_blank" rel="noopener">https://www.cyberciti.biz/faq/howto-use-wipefs-to-wipe-a-signature-from-disk-on-linux/</a></li>

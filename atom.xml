@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://dragonkid.github.io/"/>
-  <updated>2017-12-14T03:36:21.122Z</updated>
+  <updated>2018-02-11T16:00:01.185Z</updated>
   <id>https://dragonkid.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Xware on Raspberry Pi</title>
+    <link href="https://dragonkid.github.io/2018/01/24/Xware%20on%20Raspberry%20Pi/"/>
+    <id>https://dragonkid.github.io/2018/01/24/Xware on Raspberry Pi/</id>
+    <published>2018-01-24T03:25:47.717Z</published>
+    <updated>2018-02-11T16:00:01.185Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Use Raspberry Pi as Thunder remote downloader.&lt;/p&gt;
+&lt;h1 id=&quot;Xware-on-Raspberry-Pi&quot;&gt;&lt;a href=&quot;#Xware-on-Raspberry-Pi&quot; class=&quot;headerlink&quot; title=&quot;Xware on Raspberry Pi&quot;&gt;&lt;/a&gt;Xware on Raspberry Pi&lt;/h1&gt;&lt;p&gt;Xware 是迅雷开发的一款远程下载固件，可以使用其在树莓派上自行搭建迅雷远程下载器。&lt;/p&gt;
+&lt;h2 id=&quot;Install-Xware&quot;&gt;&lt;a href=&quot;#Install-Xware&quot; class=&quot;headerlink&quot; title=&quot;Install Xware&quot;&gt;&lt;/a&gt;Install Xware&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;take /usr/share/thunder
+wget
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Streaming Media Server on Raspberry Pi</title>
@@ -69,7 +94,7 @@
     <link href="https://dragonkid.github.io/2017/12/01/Arch%20Configuration/"/>
     <id>https://dragonkid.github.io/2017/12/01/Arch Configuration/</id>
     <published>2017-12-01T11:35:05.030Z</published>
-    <updated>2017-12-12T10:21:05.137Z</updated>
+    <updated>2018-02-11T14:34:45.430Z</updated>
     
     <summary type="html">
     
