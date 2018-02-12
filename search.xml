@@ -86,7 +86,7 @@ systemctl start thunder-portal.service &amp;&amp; systemctl enable thunder-porta
 <pre><code>mkdir /mnt/external_disk
 mount /dev/sda1 /mnt/external_disk/
 </code></pre><p>将移动硬盘设置为开机自动挂载：</p>
-<pre><code>echo -ne &#39;/dev/sda1\t/mnt/external_disk/\tntfs-3g\tdefaults,noexec,umask=0000\t0\t0&#39; &gt;&gt; /etc/fstab
+<pre><code>echo -ne &#39;/dev/sda1\t/mnt/external_disk/\tauto\tdefaults,noexec,umask=0000\t0\t0&#39; &gt;&gt; /etc/fstab
 </code></pre><h2 id="Minidlna"><a href="#Minidlna" class="headerlink" title="Minidlna"></a>Minidlna</h2><p>安装配置 minidlna，提供流媒体服务。</p>
 <pre><code>pacman -S minidlna
 </code></pre><p>编辑配置文件 <code>/etc/minidlna.conf</code>，并修改如下配置：</p>
