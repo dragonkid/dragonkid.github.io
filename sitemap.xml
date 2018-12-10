@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://dragonkid.github.io/2017/12/01/Arch%20Configuration/</loc>
+    
+    <lastmod>2018-11-26T14:33:17.198Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://dragonkid.github.io/2017/12/09/Streaming%20Media%20Server%20on%20Raspberry%20Pi/</loc>
     
-    <lastmod>2018-02-12T14:53:56.751Z</lastmod>
+    <lastmod>2018-11-21T16:20:46.373Z</lastmod>
     
   </url>
   
@@ -12,13 +19,6 @@
     <loc>https://dragonkid.github.io/2018/01/24/Xware%20on%20Raspberry%20Pi/</loc>
     
     <lastmod>2018-02-11T16:02:58.726Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://dragonkid.github.io/2017/12/01/Arch%20Configuration/</loc>
-    
-    <lastmod>2018-02-11T14:34:45.430Z</lastmod>
     
   </url>
   
