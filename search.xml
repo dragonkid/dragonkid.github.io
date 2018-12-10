@@ -153,6 +153,13 @@ ln -sf /usr/include/ImageMagick-7/MagickWand /usr/include/ImageMagick-7/wand
         netbios name = XiaoZhuTVSmb
         server string = XiaoZhuTV Samba server
         security = user
+        # fix slow file transfer with mac
+        ea support = yes
+        vfs objects = catia fruit streams_xattr
+        fruit:resource = file
+        fruit:metadata = netatalk
+        fruit:locking = none
+        fruit:encoding = native
 [Movies]
         path = /mnt/external_disk/
         valid users = god
