@@ -326,7 +326,10 @@ makepkg -si
 <span class="token function">rm</span> -rf package-query/ package-query.tar.gz yaourt/ yaourt.tar.gz
 </code></pre>
 <h2 id="build-essential"><a href="#build-essential" class="headerlink" title="build-essential"></a>build-essential</h2><pre><code>pacman -S mlocate base-devel cmake sudo htop bmon wget tmux
-</code></pre><h1 id="Backup"><a href="#Backup" class="headerlink" title="Backup"></a>Backup</h1><pre><code>dd if=/dev/disk3 bs=16m | gzip &gt; raspberrypi.img.gz
+</code></pre><h2 id="overlay"><a href="#overlay" class="headerlink" title="overlay"></a>overlay</h2><ul>
+<li><a href="https://github.com/nils-werner/raspi-overlayroot" target="_blank" rel="noopener">https://github.com/nils-werner/raspi-overlayroot</a></li>
+</ul>
+<h1 id="Backup"><a href="#Backup" class="headerlink" title="Backup"></a>Backup</h1><pre><code>dd if=/dev/disk3 bs=16m | gzip &gt; raspberrypi.img.gz
 </code></pre><h1 id="Refs"><a href="#Refs" class="headerlink" title="Refs"></a>Refs</h1><ul>
 <li><a href="https://www.cyberciti.biz/faq/howto-use-wipefs-to-wipe-a-signature-from-disk-on-linux/" target="_blank" rel="noopener">https://www.cyberciti.biz/faq/howto-use-wipefs-to-wipe-a-signature-from-disk-on-linux/</a></li>
 </ul>
